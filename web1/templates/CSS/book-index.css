@@ -1,0 +1,440 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+	margin:0;
+	padding:0;
+}
+body{
+	
+}
+
+.hide{
+	display: none;
+}
+/*遮罩层里面的代码*/
+.mask{
+	position: fixed;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	background-color: rgba(0,0,0,0.5);
+	z-index: 100;
+}
+
+.deng{
+	position: absolute;
+	left:550px;
+	top:100px;
+	background-color: #fff;
+	width:700px;
+	height:500px;
+}
+
+.deng span{
+	
+	margin-left: 300px;
+	font-size: 36px;
+	color: rgb(0,191,255);
+}
+
+.deng-close{
+	position: absolute;
+	top: 0;
+	right:0;
+	width: 40px;
+	height:40px;
+	background-color: red;
+}
+
+.deng-wrap{
+	position: absolute;
+	top:100px;
+	left:150px;
+}
+
+.deng p{
+	margin-top: 30px;
+	font-size: 28px;
+}
+
+.deng p input{
+	width: 220px;
+	height:28px;
+	line-height: 28px;
+}
+
+.deng-sub{
+	margin-top: 30px;
+}
+
+/*正文*/
+.main{
+	border:solid red 2px;
+	width:100%;
+	height:900px;
+	background-color:#FFF;
+	margin:0px auto;
+}
+
+.top{
+	width:100%;
+	height:100px;
+	box-shadow:7px 0px 15px #888888;
+	position: relative;
+}
+
+/*这是搜索框的代码*/
+
+.seek{
+	position: absolute;
+	width:350px;
+	height:100%;
+	right:500px;
+	
+
+}
+
+.seek-line{
+	position: absolute;
+	width:350px;
+	height:2px;
+	background-color: rgb(30,144,255);
+	top:80px;
+	right:500px;
+
+}
+
+.kuang{
+	height:50px;
+	line-height: 50px;
+	font-size: 24px;
+	width:300px;
+	margin-top: 25px;
+	float: left;
+	background-color: rgba(0,0,0,0);
+	border:0px;
+	outline: none;
+}
+
+
+
+.ka{
+	float: left;
+	margin-top: 25px;
+	border:0px;
+	width:50px;
+	height:50px;
+	background-image: url(../images/so.jpg);
+}
+
+/*这是顶部登陆的代码*/
+
+.login{
+	position: absolute;
+	width:200px;
+	height: 100%;
+	right:20px;
+}
+
+.login li{
+	padding: 30px 20px;
+	float:left;
+	list-style: none;
+	border:#fff 5px dotted;
+	border-radius: 50%;
+	transition:all 0.5s ease;
+}
+
+.login a{
+	font-size: 22px;
+	text-decoration: none;
+	color: #333;
+	font-weight: bold;
+    transition: all 0.5s ease;
+}
+
+.login a:hover{
+	color:red;
+    
+}
+
+.login li:hover{
+    border:rgba(0,191,255,0.5) 5px dotted;
+
+	border-radius: 50%;
+	border-bottom-color: #fff;
+}
+
+.wrap{
+	width:100%;
+	height:800px;
+	
+}
+
+.core{
+	position: relative;
+	margin: 30px auto;
+	width:1500px;
+	height:700px;
+	background-color: #fff;
+	border-radius: 25px;
+	box-shadow: 10px 10px 20px #888888;
+	overflow: hidden;
+}
+
+.left-list{
+	position: relative;
+	width:400px;
+	height: 100%;
+	background-color: rgba(0,0,0,0.8);
+	border-radius: 25px 0 0 25px;
+}
+
+.left-list ul{
+	position: absolute;
+	right:0px;
+	top:50px;
+	width:360px;
+	height: 600px;
+	
+	border-radius: 20px 0 0 20px;
+}
+
+.left-list li{
+    list-style: none;
+    width:100%;
+    height:100px;
+    border-radius: 20px 0 0 20px;
+    background: url(../images/next.png) no-repeat 260px 50%;
+    transition: all 0.5s ease;
+}
+
+.left-list li a{
+	position: relative;
+	display: inline-block;
+	width:100%;
+	height:100px;
+	padding-left: 50px;
+	line-height: 100px;
+	font-size: 26px;
+	text-decoration: none;
+	color:rgba(255,255,255,0.8);
+	box-sizing: border-box;
+	
+}
+
+.line{
+	position: absolute;
+	background-color: rgba(0,191,255,0);
+	z-index: 99;	
+	transition: .3s ease-out;
+}
+
+.line-right{
+        width:5px;
+        height:0px;
+        top:-110%;
+        right: 0px;
+}
+
+.line-bottom{
+	width:0px;
+	height:5px;
+	top:100%;
+	right:-110%;
+}
+
+.line-left{   
+           width:5px;
+           height:0px;
+           left:-2px;
+           bottom:-110%;}
+
+.line-top{
+          width:0px;
+          height:5px;
+          left:-110%;
+          top:-2px;
+      }
+
+.left-list li:hover .line-bottom{
+	width:100%;
+	right:0px;
+}
+
+.left-list li:hover .line-left{height:100%;
+                         bottom:0px;}
+
+.left-list li:hover .line-top{width:100%;
+                        left:0px;}
+
+.left-list li:hover .line-right{
+	height:100%;
+	top:0px;
+}
+
+.left-list li:hover .line{
+	background-color: rgba(0,191,255,1);
+}
+
+.left-list li:hover a{
+	font-size: 28px;
+	color:rgba(255,255,255,1);
+	background-color: rgba(255,255,255,0.3);
+}
+
+.left-list li:hover{
+	
+	background-color: rgba(255,255,255,0.5);
+	background: url(../images/next.png) no-repeat 280px 50%;
+}
+/*这下面是左边栏内容的代码*/
+
+.show{
+	position: absolute;
+	width:675px;
+	height:700px;
+	background-color:#fff;
+	left:400px;
+	top:0px;
+	z-index: 19;
+	border-right:blue 1px solid;
+
+}
+
+#left1 a{
+	display: inline-block;
+	margin:10px;
+	text-decoration: none;
+	font-size: 22px;
+	color:#333;
+
+}
+
+#left1 a:hover{
+	color:red;
+	text-decoration: underline;
+}
+
+/*这里是中间部分代码*/
+
+.centre{
+	position: absolute;
+	left:400px;
+	top:400px;
+	height:300px;
+	width:1000px;
+	background: url(../images/blue.jpg) 1000px 300px;
+}
+
+/*这里面是图片轮播的代码*/
+#container{
+		position: absolute;
+		left:400px;
+		top:0px;
+		width: 600px;
+		height: 400px;
+		overflow: hidden;
+	}
+	
+	#prev{
+	position:absolute;
+	top:0;
+	width:30%;
+	height:100%;
+	
+	background:url('../images/prev.png') no-repeat left center;
+	left: 0;
+	cursor: pointer;
+}
+	#next{
+		position: absolute;
+	    top:0;
+	    right: 0;
+	    width:30%;
+	    height:100%;
+		background:url('../images/next.png') no-repeat right center;
+		
+		cursor: pointer;
+
+		
+	}
+	#list{
+		position: absolute;
+		left: 0px;
+		width:4200px;
+		height:100%;
+        
+
+	}
+	#list img{
+		
+		float:left;
+	}
+	#but{
+		position: absolute;
+		width:100px;
+		height:10px;
+		left:250px;
+		bottom: 20px;
+	}
+	#but span{
+		float: left;
+		width:10px;
+		height: 10px;
+		border-radius: 50%;
+		border:#fff solid 1px;
+		background-color: #333;
+		margin-left: 5px;
+        cursor: pointer;
+	}
+	#but span:hover{
+		background-color: rgba(255,0,0,0.5);
+	}
+	#but .on{
+		background-color: orangered;
+	}
+
+
+/*接下来是右边侧栏的代码*/
+	.right-wrap{
+		position: absolute;
+		top:0px;
+		left:1400px;
+		width: 500px;
+		height:100%;
+		transition: all .3s ease;
+	}
+
+	.right-list{
+		float: left;
+		width:100px;
+		height:100%;
+
+		background-color: rgba(0,0,0,0.8);
+		border-radius: 0 25px 25px 0;
+		transition: all .5s ease;
+	}
+
+	.right-content{
+		float: left;
+		width:400px;
+		height: 100%;
+		background-color: rgb(78,185,241);
+		box-shadow: -15px -15px 40px #fff inset;
+        box-sizing: border-box;
+	}
+
+	
+	.right-wrap:hover .right-list{
+		width:25px;
+        
+        border-radius: 25px 0 0 25px;
+   		background-color: rgb(190,235,254);
+    }
+
+    .right-wrap:hover{
+    	left:1075px;
+    }
+
