@@ -3,34 +3,36 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>用户注册表</title>
-<link href="CSS/book-zhu.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
-<script type="text/javascript" src="js/jquery.validate.js" charset="UTF-8" ></script>
-<script src="js/book-zhu.js" type="text/javascript"></script>
+<link href="../../static/CSS/book-zhu.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../../static/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../../static/js/jquery.validate.js" charset="UTF-8" ></script>
+<script src="../../static/js/book-zhu.js" type="text/javascript"></script>
 </head>
 
 <body>
+
 <div class="main">
 	<div id="form">
 		<form method="post" action="" id="form1">
-			
+            {% csrf_token %}
+            {{ form.as_p }}
 			<label for="phone">账号(请填写手机号)：</label><br/>
 			<input type="text" name="phone" value=""><br/>
 			<label for="passwords">密码：</label><br/>
 			<input type="password" name="passwords" value=""><br/>		
 			<label for="department">系别：</label><br/>
-			<select>
-				<option value="">电子信息工程系</option>
+			<select name="department" >
+				<!--<option value="">电子信息工程系</option>
 				<option value="">计算机科学与技术系</option>
 				<option value="">通信工程系</option>
 				<option value="">管理系</option>
-				<option value="">信息安全系</option>
+				<option value="">信息安全系</option>-->
 			</select><br/>
 			<label for="passwords">性别：</label><br/>
 			<label>男</label><input type="radio" value="1" name="gender">
 			<label>女</label><input type="radio" value="2" name="gender"><br/>
 			<label for="username">昵称：</label><br/>
-			<input type="text" name="username" value=""><br/>
+			<input type="text" name="nickname" value=""><br/>
 			<p class="ti">
 				<input type="submit" name="" value="提交" class="sub" >
 				<a class="blank"></a>
@@ -39,6 +41,16 @@
 		</form>
 	</div>
 </div>
-	
+	<input type="text" value={{ errorlog }} id="aa"/>
 </body>
+<script>
+    window.onload=function(){
+        var aa=document.getElementById("aa");
+        var flag=aa.value;
+        if( flag =="ok")
+        {
+            alert("ok");
+        }
+    }
+</script>
 </html>
