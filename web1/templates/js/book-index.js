@@ -14,6 +14,13 @@ window.onload=function(){
 			$("#mask").addClass("hide");
 		});
 
+		/*这是登录变换*/
+
+		$("#login0").removeClass();
+		$("#login0").addClass("login1");
+		$("#login0 li:eq(0)").html('<a href="#">通知</a>');
+		$("#login0 li:eq(1)").html('<a href="#">头像</a>');
+
 	/*这是图片轮播的代码*/
 
 		var list=document.getElementById('list');
